@@ -1,11 +1,14 @@
 
-$black: #444;
-$white: #e9e9e9;
-$accent: #8ca6bd;
+$black: #1C3A47;
+$white: #FFF7EF;
+$accent: #5BA8B7;
+$accent2: #BDE3EF;
 
-$light-black: #aaa; // lighten($black, 38%);
+$neutral-white: #aaa; // lighten($black, 38%);
 $dark-accent: desaturate(darken($accent, 10%), 10%);
 
-$typecolor: $black;
+$typecolor: $white;
 
-$fontstack: "Roboto", Helvetica, sans-serif;
+$fontstack: "DM Sans", Helvetica, sans-serif;
+
+$titlestack: "DM Serif Display", Georgia, serif;

@@ -4,5 +4,184 @@
 @import 'skeleton';
 @import '_palette';
 @import '_typography';
-@import 'boilerplate';
 
+::selection {
+  background-color: lighten($accent, 20%);
+}
+
+html {
+  background-color: $accent;
+  font-size: 11pt;
+}
+
+body {
+  font-family: $fontstack;
+  color: $typecolor;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: $titlestack;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin-top: 2.6rem;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  font-family: $fontstack;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  border-left: solid 4px $accent;
+  margin-left: 0.8rem;
+  padding-left: 1.4rem;
+}
+
+.container {
+  width: 100vw;
+  max-width: 800px;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .row {
+    margin-bottom: 2rem;
+  }
+}
+
+content {
+  flex: 1 0 auto; // makes the footer sticky
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba($white, 0.6);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  flex-direction: column;
+  height: 5.2rem;
+  margin-top: -1rem;
+}
+
+@media (min-width: 550px) {
+  footer {
+    font-size: 1.4rem;
+    flex-direction: row;
+  }
+}
+
+// utility classes
+.center {
+  display: block;
+  text-align: center;
+}
+
+.black-text {
+  color: $black;
+}
+
+.white-text {
+  color: $white;
+}
+
+.accent-text {
+  color: $accent;
+}
+
+.icon {
+  font-family: Icomoon;
+}
+
+.tile {
+  min-height: 80vh;
+  background-color: $black;
+  color: $white;
+}
+
+.card {
+  background-color: $white;
+  border-radius: 12px;
+  padding: 2.8rem 2.4rem 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  color: $black;
+  h3 {
+    color: $accent;
+    margin-bottom: 1.6rem;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+// more specific styles
+
+nav {
+  color: $white;
+  background-color: transparent;
+  height: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    font-size: 3rem;
+    font-family: $fontstack;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      color: rgba($white, 0.6);
+    }
+    &:active {
+      color: rgba($white, 0.6);
+    }
+  }
+}
+
+.big-image {
+  background: url(/assets/images/pastel-pool.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  text-shadow: 0 0 18px rgba($black, 0.6);
+  border-bottom: 6rem solid $black;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.2rem;
+  line-height: 7.2rem;
+  font-family: $titlestack;
+  color: $white;
+  
+  text-align: center;
+}
+
+@media (min-width: 550px) {
+  .title {
+    font-size: 7.4rem;
+    line-height: 9rem;
+  }
+}
