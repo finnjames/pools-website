@@ -1,0 +1,76 @@
+::selection {
+  background-color: lighten($accent, 20%);
+}
+
+html {
+  background-color: $white;
+  font-size: 10pt;
+}
+
+body {
+  font-family: $fontstack;
+  color: $typecolor;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border-left: solid 4px $accent;
+  margin-left: 0.8rem;
+  padding-left: 1.4rem;
+}
+
+header {
+  background: $accent;
+  color: $white;
+}
+
+.container {
+  width: 100vw;
+  max-width: 800px;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+content {
+  flex: 1 0 auto; // makes the footer sticky
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $light-black;
+}
+
+// utility classes
+.center {
+  display: block;
+  text-align: center;
+}
+
+.white-text {
+  color: $white;
+}
+
+.black-text {
+  color: $black;
+}
+
+.accent-text {
+  color: $accent;
+}
+
+.icon {
+  font-family: Icomoon;
+}
