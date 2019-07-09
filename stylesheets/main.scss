@@ -155,7 +155,7 @@ nav {
 }
 
 .big-image {
-  background: url(/assets/images/pastel-pool.jpg) no-repeat center center fixed; 
+  background: url({{ site.baseurl }}/assets/images/pastel-pool.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

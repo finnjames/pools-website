@@ -2,7 +2,7 @@ title: radiolevity Tech Support
 email: radiolevity.help@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Friendly neighborhood tech support for Macintosh
-baseurl: "" 
+baseurl: "/pools-website" 
 url: "https://radiolevity.com"
 github_username:  radiolevity
 
