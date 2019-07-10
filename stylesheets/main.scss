@@ -6,7 +6,7 @@
 @import '_typography';
 
 ::selection {
-  background-color: lighten($accent, 20%);
+  background-color: lighten($accent, 30%);
 }
 
 html {
@@ -20,18 +20,23 @@ body {
   font-weight: 400;
 }
 
-h1 {
-  font-family: $titlestack;
-  font-style: italic;
-}
-
-h2 {
+h1, h2 {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   font-weight: bold;
-  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 3.2rem;
+  margin-bottom: 2.8rem;
+}
+
+h2 {
+  font-size: 2.6rem;
   line-height: 2.2rem;
-  margin-top: 2.6rem;
+  margin-bottom: 1rem;
 }
 
 h3, h4, h5, h6 {
@@ -42,6 +47,11 @@ h3, h4, h5, h6 {
 
 p {
   margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: $accent;
 }
 
 blockquote {
@@ -57,38 +67,19 @@ blockquote {
   flex-direction: column;
   align-items: center;
   height: auto;
+  padding: 0 4vw;
   background-color: $accent;
   border-top: 4rem solid $black;
   background: linear-gradient($accent, $black);
-  .row {
-    max-width: 800px;
-    width: 90%;
-  }
+}
+
+.row {
+  max-width: 800px;
+  width: 98%;
 }
 
 content {
-  flex: 1 0 auto; // makes the footer sticky
-  margin: 2rem 0;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: rgba($white, 0.6);
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: bold;
-  height: 4.2rem;
-  margin: -1rem 0 2rem;
-}
-
-@media (min-width: 550px) {
-  footer {
-    font-size: 1.4rem;
-    flex-direction: row;
-  }
+  padding: 1rem 0;
 }
 
 // utility classes
@@ -111,6 +102,9 @@ footer {
 
 .icon {
   font-family: Icomoon;
+  font-weight: 400;
+  font-style: none;
+  text-decoration: none;
 }
 
 .tile {
@@ -124,15 +118,22 @@ footer {
   border-radius: 12px;
   padding: 2.8rem 2.4rem 1.8rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  box-shadow: $shadow-effect;
   color: $black;
   h3 {
     color: $accent;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
+    line-height: 3rem;
   }
   button {
     width: 100%;
   }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // more specific styles
@@ -147,7 +148,6 @@ nav {
   justify-content: flex-start;
   padding-left: 2rem;
   align-items: center;
-  text-shadow: 0 0 18px rgba($black, 0.6);
   a {
     font-size: 3rem;
     font-family: $fontstack;
@@ -163,12 +163,51 @@ nav {
   }
 }
 
+#menu-button {
+  font-size: 4rem;
+  color: $accent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.2rem;
+  width: 4.2rem;
+  border-radius: 50%;
+  background-color: $white;
+  text-shadow: none;
+  // box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: $shadow-effect;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  div {
+  }
+  div:hover {
+    color: rgba($accent, 0.74);
+    animation: navigate 1s ease-out;
+  }
+  div:active {
+    color: rgba($accent, 0.44);
+  }
+}
+
+@keyframes navigate {
+  0% { transform:rotate(0deg); }
+  5% { transform:rotate(-10deg); }
+  20% { transform:rotate(30deg); }
+  40% { transform:rotate(-20deg); }
+  60% { transform:rotate(10deg); }
+  80% { transform:rotate(-5deg); }
+  100% { transform:rotate(0deg); }
+}
+
 // full screen image (mobile friendly!)
 .big-image {
   height: 100vh;
   width: 100vw;
   z-index: -2;
-  text-shadow: 0 0 18px rgba($black, 0.6);
+  text-shadow: 0 0 42px rgba($black, 0.48);
 }
 
 .image-fluid {
@@ -192,6 +231,8 @@ nav {
   font-style: italic;
   font-size: 5.2rem;
   line-height: 6rem;
+  text-shadow:  $shadow-effect,
+                0 4px 48px rgba($black,0.1),;
 }
 
 
@@ -199,5 +240,24 @@ nav {
   .big-text {
     font-size: 7.4rem;
     line-height: 9rem;
+  }
+}
+
+footer {
+  min-height: 4.2rem;
+  margin: -1rem 0 2rem;
+  color: rgba($accent, 0.64);
+  text-transform: uppercase;
+  font-weight: bold;
+  .flex {
+    font-size: 1rem;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 550px) {
+  footer .flex{
+    font-size: 1.2rem;
+    flex-direction: row;
   }
 }

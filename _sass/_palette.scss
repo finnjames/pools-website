@@ -1,14 +1,17 @@
+// https://coolors.co/1b4047-ffefe5-5bb7b4-ddf7d4-bdefef
 
-$black: #1C3A47;
-$white: #FFF7EF;
-$accent: #5BA8B7;
-$accent2: #BDE3EF;
-
-$neutral-white: #aaa; // lighten($black, 38%);
-$dark-accent: desaturate(darken($accent, 10%), 10%);
+$black: #1B4047;
+$white: #FFEFE5;
+$accent: #5BB7B4;
+$accent2: #DDF7D4;
+$accent3: #BDEFEF;
 
 $typecolor: $white;
 
 $fontstack: "DM Sans", Helvetica, sans-serif;
 
 $titlestack: "DM Serif Display", Georgia, serif;
+
+$shadow-effect: 0 2px 6px rgba($black,0.4),
+                0 3px 12px rgba($black,0.2),
+                0 4px 24px rgba($black,0.1),;
