@@ -152,7 +152,6 @@ content {
   border-radius: 2.1rem;
   background-color: $white;
   text-shadow: none;
-  // box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   box-shadow: $shadow-effect;
   position: fixed;
   top: 1.4rem;
@@ -162,10 +161,14 @@ content {
   &.wobble {
     font-size: 4rem;
     div:hover {
-      color: rgba($accent, 0.74);
       animation: navigate 1s ease-out;
     }
-    div:active {
+  }
+  div {
+    &:hover {
+      color: rgba($accent, 0.74);
+    }
+    &:active {
       color: rgba($accent, 0.44);
     }
   }
@@ -188,7 +191,7 @@ content {
     visibility: visible;
     opacity: 1;
     nav {
-      right: 2rem;
+      right: 2.1rem;
     }
   }
 }
@@ -201,7 +204,7 @@ nav {
   position: absolute;
   top: 6rem;
   right: 0rem;
-  transition: right .4s;
+  transition: right .4s ease-out;
   a {
     font-size: 4rem;
     text-transform: lowercase;
