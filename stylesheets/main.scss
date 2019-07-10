@@ -29,7 +29,7 @@ h1, h2 {
 
 h1 {
   font-size: 4.2rem;
-  line-height: 3.2rem;
+  line-height: 4.2rem;
   margin-bottom: 2.8rem;
 }
 
@@ -178,8 +178,8 @@ nav {
   // box-shadow: 0 2px 4px rgba(0,0,0,0.4);
   box-shadow: $shadow-effect;
   position: fixed;
-  top: 2rem;
-  left: 2rem;
+  top: 1.4rem;
+  right: 2rem;
   z-index: 2;
   div {
   }
@@ -189,6 +189,12 @@ nav {
   }
   div:active {
     color: rgba($accent, 0.44);
+  }
+}
+
+@media (min-width: 550px) {
+  #menu-button {
+    left: 2rem;
   }
 }
 
