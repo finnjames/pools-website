@@ -116,6 +116,7 @@ content {
 .card {
   background-color: $white;
   border-radius: 12px;
+  border-bottom: solid 4px desaturate(darken($white, 16%), 40%);
   padding: 2.8rem 2.4rem 1.8rem;
   margin-bottom: 2rem;
   box-shadow: $shadow-effect;
@@ -139,32 +140,8 @@ content {
 // more specific styles
 
 // navigation
-nav {
-  color: $white;
-  background-color: transparent;
-  height: 2rem;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 2rem;
-  align-items: center;
-  a {
-    font-size: 3rem;
-    font-family: $fontstack;
-    color: $white;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover {
-      color: rgba($white, 0.6);
-    }
-    &:active {
-      color: rgba($white, 0.6);
-    }
-  }
-}
-
 #menu-button {
-  font-size: 4rem;
+  font-size: 3.6rem;
   color: $accent;
   padding: 0;
   display: flex;
@@ -172,7 +149,7 @@ nav {
   align-items: center;
   height: 4.2rem;
   width: 4.2rem;
-  border-radius: 50%;
+  border-radius: 2.1rem;
   background-color: $white;
   text-shadow: none;
   // box-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -181,20 +158,58 @@ nav {
   top: 1.4rem;
   right: 2rem;
   z-index: 2;
-  div {
-  }
-  div:hover {
-    color: rgba($accent, 0.74);
-    animation: navigate 1s ease-out;
-  }
-  div:active {
-    color: rgba($accent, 0.44);
+  cursor: pointer;
+  &.wobble {
+    font-size: 4rem;
+    div:hover {
+      color: rgba($accent, 0.74);
+      animation: navigate 1s ease-out;
+    }
+    div:active {
+      color: rgba($accent, 0.44);
+    }
   }
 }
 
-@media (min-width: 550px) {
-  #menu-button {
-    left: 2rem;
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding-right: 0;
+  background-color: rgba($white, 0.72);
+  z-index: 1;
+  transition-property: opacity, visibility;
+  transition-duration: .4s;
+  visibility: hidden;
+  opacity: 0;
+  &.menu-visible {
+    visibility: visible;
+    opacity: 1;
+    nav {
+      right: 2rem;
+    }
+  }
+}
+
+nav {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 6rem;
+  right: 0rem;
+  transition: right .4s;
+  a {
+    font-size: 4rem;
+    text-transform: lowercase;
+    color: $black;
+    font-weight: bold;
+    &:hover {
+      color: rgba($accent, 1);
+    }
   }
 }
 
@@ -229,12 +244,13 @@ nav {
 
 .big-text {
   display: flex;
-  height: 40vh;
+  height: 60vh;
   text-align: center;
   justify-content: center;
   align-items: center;
   font-family: $titlestack;
   font-style: italic;
+  letter-spacing: 4px;
   font-size: 5.2rem;
   line-height: 6rem;
   text-shadow:  $shadow-effect,

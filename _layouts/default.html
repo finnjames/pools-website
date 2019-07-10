@@ -2,11 +2,17 @@
 layout: base
 ---
 
+<div id="overlay">
+  <nav>
+    {% for item in site.data.nav %}
+      <a href="{{ site.baseurl }}{{ item.link }}">{{ item.title }}</a>
+    {% endfor %}
+  </nav>
+</div>
+
 <header>
+  <div id="menu-button" class="wobble"><div id="compass" class="icon"></div></div>
   <div class="big-image">
-    <nav style="height: 10%">
-      <a id="menu-button" href="#"><div class="icon"></div></a>
-    </nav>
     <img class="image-fluid" src="assets/images/pastel-pool.jpg" />
     <div class="big-text">Gramps Pools</div>
   </div>
