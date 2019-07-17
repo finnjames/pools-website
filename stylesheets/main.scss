@@ -210,8 +210,11 @@ nav {
     text-transform: lowercase;
     color: $black;
     font-weight: bold;
+    &.active {
+      color: darken($accent, 10%);
+    }
     &:hover {
-      color: rgba($accent, 1);
+      color: $accent;
     }
   }
 }

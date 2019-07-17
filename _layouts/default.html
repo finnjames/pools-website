@@ -5,7 +5,7 @@ layout: base
 <div id="overlay">
   <nav>
     {% for item in site.data.nav %}
-      <a href="{{ site.baseurl }}{{ item.link }}">{{ item.title }}</a>
+      <a href="{{ site.baseurl }}{{ item.link }}" class="{% if page.url == href %}active{% endif %}">{{ item.title }}</a>
     {% endfor %}
   </nav>
 </div>
