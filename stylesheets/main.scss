@@ -187,12 +187,12 @@ content {
   transition-duration: .4s;
   visibility: hidden;
   opacity: 0;
+  nav {
+    padding-right: 2.1rem;
+  }
   &.menu-visible {
     visibility: visible;
     opacity: 1;
-    nav {
-      right: 2.1rem;
-    }
   }
 }
 
