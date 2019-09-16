@@ -1,0 +1,66 @@
+---
+layout: base
+---
+
+<head>
+  <style>
+    .container {
+      background: linear-gradient(#5BB7B4, #1B4047);
+    }
+  </style>
+</head>
+
+<div id="overlay">
+  <nav>
+    {% for item in site.data.nav %}
+      <a href="{{ site.baseurl }}{{ item.link }}" class="{% if page.url == href %}active{% endif %}">{{ item.title }}</a>
+    {% endfor %}
+  </nav>
+</div>
+
+<header>
+  <div id="menu-button" class="wobble"><div id="compass" class="icon"></div></div>
+  <div class="big-image">
+    <img class="image-fluid" src="assets/images/pastel-pool.jpg" />
+    <div class="big-text">Gramps’<br />Pools</div>
+  </div>
+</header>
+
+<div class="container" style="border-top-width: 4rem; border-top-style: solid;">
+  <div class="row" style="margin-top: -18rem;">
+    <div class="card six columns">
+      <h3>Lorem Ipsum</h3>
+      <p>
+        The Pacific Ocean extends from north to south between the two Polar Circles, and from east to west between Asia and America, over an extent of 145 degrees of longitude.
+      </p>
+      <a href="#">
+        <button class="button-primary">
+          cast off
+        </button>
+      </a>
+    </div>
+    <div class="card six columns">
+      <h3>Dolor Sit Amet</h3>
+      <p>
+        "Sir," said Captain Nemo, "we will, if you please, take our bearings and fix the starting-point of this voyage. It is a quarter to twelve; I will go up again to the surface."
+      </p>
+      <a href="#">
+        <button class="button-primary">
+          submerge
+        </button>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      {{ content }}
+    </div>
+  </div>
+  <footer class="row">
+    <div class="flex" style="justify-content: space-between">
+      <span style="text-align: left; flex: 10">the best in pool construction</span>
+      <span class="icon" style="text-align: center; flex: 1; font-size: 2.8rem"></span>
+      <span style="text-align: right; flex: 10">&copy; 2019 <a href="https://radiolevity.com">Finn James</a></span>
+    </div>
+  </footer>
+</div>
